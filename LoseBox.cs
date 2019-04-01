@@ -5,7 +5,7 @@ using UnityEngine;
 public class LoseBox : MonoBehaviour
 {
 
-    Transform playerTR; 
+    Transform playerTR; // set aside memory to store the player's transform
 
     Vector3 startPoint; // this will be used to store the location of the player at the begining of the level
 
@@ -34,11 +34,7 @@ public class LoseBox : MonoBehaviour
             Debug.Log("touched the lose box");
         }
 
-        if (other.CompareTag("PickUps"))
-        {
-            SuperGameManager.pickUpCount--;
-        }
-
+   
     }
 
 }
